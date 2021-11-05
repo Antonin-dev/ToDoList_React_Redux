@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./SideNotes.css";
-import { Link } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import Note from "./Note/Note";
 export default function SideNotes() {
   // State
   const { notes } = useSelector((state) => state.notesReducer);
+  const {darkmode} = useSelector(state => state.settingsReducer);
   const [notesList, setNotesList] = useState(notes);
 
   // Function
@@ -23,7 +23,7 @@ export default function SideNotes() {
   }, [notes]);
 
   return (
-    <div className="notes-display">
+    <div className={darkmode ? "notes-display dark-mode" : "notes-display"}>
       <h2>Mes notes</h2>
       <form onSubmit={preventForm}>
         <input

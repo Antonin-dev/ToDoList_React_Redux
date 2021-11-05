@@ -5,7 +5,7 @@
     padding: 10px 12px;
     cursor: pointer;
     position: relative;
-    
+
 }
 .txt-note-prev a {
     width: 80%;
@@ -63,7 +63,7 @@
         height: 25px;
 
     }
-    
+
     .bloc-note-right button img {
         width: 100%;
     }
@@ -74,5 +74,9 @@
         width:100px;
     }
 
-    
+
+}
+.dark-mode{
+    background-color: #262525;
+    color: #fefefe;
 }

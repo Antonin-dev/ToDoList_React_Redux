@@ -3,6 +3,7 @@ import LogoEdit from "./ImgsSidebar/edit.svg";
 import FolderIcon from "./ImgsSidebar/folder.svg";
 import Tools from "./ImgsSidebar/settings.svg";
 import Menu from "./ImgsSidebar/menu.svg";
+import Meteo from "./ImgsSidebar/meteo.svg";
 import "./Sidebar.css";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import SideNotes from "../SideNotes/SideNotes";
@@ -54,9 +55,16 @@ export default function Sidebar() {
                 <img src={LogoEdit} alt="logo edit" />
               </li>
             </Link>
+            <Link to="/settings">
             <li>
               <img src={Tools} alt="logo tools" />
             </li>
+              </Link>
+            <Link to="/weather">
+            <li>
+              <img src={Meteo} alt="Logo meteo" />
+            </li>
+            </Link>
           </ul>
         </div>
         <SideNotes />

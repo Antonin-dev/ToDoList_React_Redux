@@ -31,7 +31,7 @@
         margin-left: 0px;
     }
     .container-txt-zone h2 {
-    
+
         font-size: 27px;
     }
     .container-txt-zone button {
@@ -39,5 +39,9 @@
         display: block;
         margin: 20px auto;
     }
-    
+
+}
+.dark-mode{
+    background-color: #262525;
+    color: #fefefe;
 }

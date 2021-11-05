@@ -3,13 +3,13 @@ import "./Note.css";
 import DelIcon from "./remove.svg";
 import Edit from "./edit.svg";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import * as actions from "../../../redux/actions/actions";
 
 export default function Note({ body, title, subtitle, id }) {
   // Redux
   const dispatch = useDispatch();
-
+  const {darkmode} = useSelector(state => state.settingsReducer);
   // Function
   const deleteNote = () => {
     dispatch({
@@ -30,9 +30,9 @@ export default function Note({ body, title, subtitle, id }) {
   }
 
   return (
-    <li className="txt-note-prev">
+    <li className={darkmode ? "txt-note-prev dark-mode" : "txt-note-prev" }>
       <Link to={{pathname:`/displayNote/${title}`}}>
-      <div className="bloc-note-left">
+      <div className={darkmode ? "bloc-note-left dark-mode" : "bloc-note-left" }>
         <p>{title}</p>
         <p>{subtitle}</p>
       </div>
