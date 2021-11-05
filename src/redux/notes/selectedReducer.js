@@ -1,4 +1,3 @@
-import {v4 as uuidv4} from "uuid";
 import * as actions from "../actions/actions"
 const INITIAL_STATE = {
     selectedNote: {
